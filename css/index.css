@@ -97,7 +97,7 @@ html,body{
 #section-header{
 
     height:550px;
-    background: url(../images/mountain-section-header.png);
+    background: url("../images/mountain-section-header.jpeg");
     text-align:center;
 
 }
@@ -270,19 +270,19 @@ html,body{
 }
 
 #first-slide{
-    background: url(../images/peak.png);
+    background: url("../images/peak.jpeg");
 }
 
 #second-slide{
-    background: url(../images/mountain-section-header.png);
+    background: url("../images/mountain-section-header.jpeg");
 }
 
 #third-slide{
-    background: url(../images/peak.png);
+    background: url("../images/peak.jpeg");
 }
 
 #fourth-slide{
-    background: url(../images/mountain-section-header.png);
+    background: url("../images/mountain-section-header.jpeg");
 }
 
 #history-carroussel-thumbnails{
@@ -444,12 +444,12 @@ html,body{
 
 #first-tab{
 
-     background: url("../images/mountain-1.png");
+     background: url("../images/mountain-1.jpeg");
 }
 
 #second-tab{
 
-    background: url("../images/mountain-2.png");
+    background: url("../images/mountain-2.jpeg");
 }
 
 .schedule-tab{
