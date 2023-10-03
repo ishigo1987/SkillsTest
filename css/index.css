@@ -1,0 +1,516 @@
+:root{
+
+    --main-color:#414f6b;
+    --link-color: #ffffff;
+    --bar-main-color: #ffffff;
+    --big-title-color: #4d4d4d;
+    --big-number-first-text-color: #667793;
+    --big-number-second-text-color: #a0a7b5;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Some utilities */
+
+.mobile-version{
+
+    display:none;
+}
+
+.bar-color{
+
+    transform: translate3d(-85px, 7px, 0);
+    height:2px;
+    width:85px;
+    display:inline-block;
+}
+
+.last-bar-position{
+
+    transform: translate3d(-83px, 7px, 0);
+    width:65px;
+
+}
+
+.bar-color-light{
+
+    background-color: var(--bar-main-color);
+}
+
+.bar-color-dark{
+
+    background-color:var(--big-title-color);
+}
+
+.number-text{
+
+    font-size:8em;
+    margin:0;
+    font-weight:bold;
+}
+
+.text-under-big-number{
+
+    color:var(--big-title-color);
+    margin:0;
+    transform:translate3d(100px, -20px, 0);
+    font-size:0.85rem;
+}
+
+.bg-position{
+
+    background-position: top !important;
+    background-attachment:scroll !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+/* end some utilities */
+
+
+html,body{
+
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow-x:hidden;
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    background: #f5f5f5;
+            
+}
+#wrapper-body{
+
+    max-width: 1400px;
+    margin:0 auto;
+}
+
+/* Start section header */
+
+#section-header{
+
+    height:550px;
+    background: url(../images/mountain-section-header.png);
+    text-align:center;
+
+}
+
+#section-header header, #second-section-header{
+
+    display: flex;
+    padding: 20px 150px 20px 150px;
+}
+
+#section-header header a{
+    display:inline-block;
+}
+
+.logo{
+
+     width: 41px;
+     height:41px;
+     text-align:center;
+}
+
+.logo img{
+
+     object-fit: cover;
+     width:41px;
+     height:41px;
+     margin:0 auto;
+     display: inline-block;
+     border-radius:50%;
+     border:1px solid #e0e0e0;
+}
+
+#header-right-side{
+
+    margin-left: auto;
+    transform:translateX(30px);
+}
+
+#header-right-side a {
+
+    margin-left: 10px;
+    color: var(--link-color);
+    margin-top:15px;
+    text-decoration:none;
+    font-size:0.8rem;
+    font-weight:bold;
+}
+
+
+#section-header p{
+
+    font-size: 4em;
+    font-weight:bold;
+    transform:translateY(100px);
+    margin:0;
+}
+
+.los-angeles-text{
+
+    color:var(--big-title-color);
+
+}
+
+.mountains-text{
+    color: var(--main-color);
+}
+/* End section section header */
+
+/* Start second section header */
+
+#second-section-header{
+
+    height: 80px;
+    position:sticky;
+    top:-15px;
+    z-index:5;
+    background: #f5f5f5;
+}
+
+.logo-and-text{
+
+    width: 220px;
+    display:flex;
+}
+
+.logo-and-text div{
+
+    margin-left:auto;
+    width:75%;
+    padding-top:5px;
+}
+
+.logo-and-text div p{
+
+    margin:0;
+    font-weight:bold;
+    font-size:0.9em;
+}
+
+#nav-second-section-header{
+
+    margin-left: auto;
+    padding-top:10px;
+    transform:translateX(35px);
+}
+
+#nav-second-section-header a{
+
+    text-decoration:none;
+    color: var(--big-title-color);
+    font-size:0.8rem;
+    font-weight:bold;
+}
+
+/* End second section header */
+
+/* Start section history */
+
+#history{
+
+    height:600px;
+    position:relative;
+}
+
+#history-text-area{
+
+    height:130px;
+    position:absolute;
+    top:20px;
+    left:150px;
+    right:150px;
+    z-index:2;
+}
+#first-big-number{
+
+    color:var(--big-number-first-text-color);
+    display:inline-block;
+   
+}
+
+#history-text-area span{
+
+    display:inline-block;
+    transform:translate3d(-30px, -20px, 0);
+    font-weight:bold;
+    font-size:1.5rem;
+    color:var(--main-color);
+}
+
+#history-carroussel-wrapper{
+
+    height:600px;
+    overflow: hidden;
+    
+}
+
+#history-carroussel{
+
+    display:flex;
+    flex-wrap: nowrap;
+    height:600px;
+
+}
+
+#history-carroussel div{
+
+    height:600px;
+    flex-shrink: 0;
+    width:100%;
+}
+
+#first-slide{
+    background: url(../images/peak.png);
+}
+
+#second-slide{
+    background: url(../images/mountain-section-header.png);
+}
+
+#third-slide{
+    background: url(../images/peak.png);
+}
+
+#fourth-slide{
+    background: url(../images/mountain-section-header.png);
+}
+
+#history-carroussel-thumbnails{
+
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    background: rgba(65, 79, 107, 0.9);
+    height:150px;
+    padding:15px;
+    padding-bottom:30px;
+}
+
+#thumbnails, #dots-carroussel{
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+#thumbnails div{
+     height: 100px;
+     width: 180px;
+}
+
+#thumbnails div img{
+
+    height: 100px;
+    width: 180px;
+    object-fit: cover;
+}
+
+#dots-carroussel{
+
+     width: 100px;
+     height:30px;
+     margin:0 auto;
+     margin-top:2px;
+
+}
+
+#dots-carroussel span{
+
+    width:6px;
+    height:6px;
+    display:inline-block;
+    border-radius:50%;
+    background:var(--big-number-second-text-color);
+    cursor:pointer;
+}
+
+#dots-carroussel span:first-child{
+
+    background:var(--bar-main-color);
+}
+
+/* End section history */
+
+/* Start climb section */
+#climb-section{
+
+     display:flex;
+     height:150px;
+     padding: 0px 200px 0px 200px;
+}
+
+#climb-text-area{
+
+    position:relative
+}
+
+#second-big-number{
+
+    color:var(--big-number-second-text-color);
+    display:inline-block;
+
+}
+
+#climb-text-area span{
+
+    display:inline-block;
+    position:absolute;
+    top:80px;
+    transform: translateX(-20px);
+    font-weight:bold;
+    font-size:1.5rem;
+    color:var(--main-color);
+}
+
+#text-aside-big-number{
+
+    transform: translate3d(80px, 50px, 0);
+    font-size:0.85rem;
+    color: var(--big-number-second-text-color);
+}
+
+/* End climb section */
+
+/* Start schedule section */
+
+#schedule-section{
+
+    height:500px;
+}
+
+#schedule-section header{
+
+    background: var(--main-color);
+    height:30px;
+    padding: 0px 150px 0px 150px;
+
+}
+
+#schedule-section header a {
+
+    color: var(--big-number-second-text-color);
+    display:inline-block;
+    height:30px;
+    padding-left:15px;
+    padding-right:15px;
+    padding-top:6px;
+    font-weight:bold;
+    font-size:0.95rem;
+    text-decoration:none;
+    margin-left:0;
+}
+
+#schedule-section header a:first-child, #schedule-section header a:active{
+
+    background: var(--big-number-second-text-color);
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+#wrapper-tabfolder{
+
+    overflow:hidden;
+    height:470px;
+
+}
+
+#tabfolder{
+
+    display:flex;
+    flex-wrap: nowrap;
+    height:470px;
+}
+
+#tabfolder div{
+
+    height:470px;
+    flex-shrink: 0;
+    width:100%;
+    background-position:center !important;
+    position:relative;
+}
+
+#first-tab{
+
+     background: url("../images/mountain-1.png");
+}
+
+#second-tab{
+
+    background: url("../images/mountain-2.png");
+}
+
+.schedule-tab{
+
+    margin: 100px 200px 0px 200px;
+    width: 300px !important;
+    height: 200px !important;
+    background: rgba(255,255,255,0.8);
+    padding: 15px 30px 15px 30px;
+}
+
+.schedule-tab h1{
+
+    color: var(--main-color);
+    margin:0;
+    
+}
+
+.schedule-list{
+
+    margin-top: 0px;
+}
+
+.no-padding-left{
+
+    padding-left: 0 !important;
+}
+
+.schedule-list td{
+
+    font-size:0.8rem;
+    color: var(--big-number-second-text-color);
+    padding:10px;
+    cursor:pointer;
+}
+
+.schedule-list td:hover{
+
+    color: var(--main-color);
+}
+
+/* End schedule section */
+
+/* Start footer section */
+
+footer{
+
+     height:60px;
+     padding: 10px 200px 20px 200px;
+     background-color: var(--main-color);
+     display:flex;
+}
+
+footer p{
+
+    color: var(--big-number-first-text-color);
+}
+
+footer > p{
+    
+    margin-left: auto;
+    font-size: 0.8rem;
+    font-weight:bold;
+}
